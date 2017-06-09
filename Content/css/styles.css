@@ -36,3 +36,11 @@ img {
   50% {color: #3C3C3C};
   100% {color: #E9E7DA};
 }
+
+a {
+  color: #AF473C;
+}
+
+a:hover {
+  color: #626E60;
+}

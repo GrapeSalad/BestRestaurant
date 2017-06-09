@@ -4,7 +4,6 @@
 
 <h3>@Model["restaurant"].GetName()</h3>
 
-<p>Average Rating: @Model["average"]</p>
 
 <h4>REVIEWS:</h4>
 @if (Model["reviews"].Count == 0)
@@ -12,6 +11,7 @@
   <p>AINT NO REVIEWS</p>
 }
 else{
+  <p>Average Rating: @Model["average"]</p>
   <ul>
     @foreach (var review in @Model["reviews"])
     {

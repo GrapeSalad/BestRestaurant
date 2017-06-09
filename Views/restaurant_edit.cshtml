@@ -1,0 +1,16 @@
+@{
+  Layout="Shared/_Layout.cshtml";
+}
+
+<h1>HI</h1>
+<h2>Edit Restaurant: @Model["selectedRestaurant"].GetName()</h2>
+
+<form action="/restaurants/@Model["selectedRestaurant"].GetId()/edit" method="post">
+  <input type="hidden" name="_method" value="PATCH">
+  <input name="restaurant-id" type="hidden" value="@Model["selectedRestaurant"].GetId()">
+  <label for="restaurant-name">Change Name:</label>
+  <input id="restaurant-name" name="restaurant-name" type="text">
+  <label for="restaurant-location">Change Location:</label>
+  <input id="restaurant-location" name="restaurant-location" type="text">
+  <button type="submit">Submit</button>
+</form>
